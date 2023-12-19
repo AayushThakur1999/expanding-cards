@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Whisper',cursive;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.picture {
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 3rem;
+    margin: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    flex: 0.5;
+    transition: all 700ms ease-in;
+}
+
+.picture h3 {
+    font-size: 2rem;
+    color: azure;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    margin: 0;
+    opacity: 0;
+}
+
+.picture.display {
+    flex: 5;
+}
+
+.picture.display h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .picture:nth-of-type(4), 
+    .picture:nth-of-type(5) {
+        display: none;
+    }
+}
